@@ -24,7 +24,7 @@ import java.util.List;
 
 public class FoodRecetas extends AppCompatActivity {
     String foodFromMenu, foodToShow;
-    TextView txtReceta, txtFoodName, txtFoodTitle;
+    TextView txtReceta, txtFoodTitle;
     ImageView imgFoodReceta;
     ImageView imgBack, imgExit;
 
@@ -33,20 +33,21 @@ public class FoodRecetas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_recetas);
         getFoodFromList();
-        appComponents();
         getFoodFromList();
-
-        //   txtReceta.setText("sa");
+        appComponents();
+        recetasDesayuno();
     }
     public void showFoodListChoosen() {
         switch (foodFromMenu) {
             case "Desayuno":
                 break;
-            case "almuerzo":
+            case "Almuerzo":
                 break;
-            case "merienda":
+            case "Merienda":
                 break;
-            case "cena":
+            case "Cena":
+                break;
+            case "Frutas":
                 break;
             default:
 
@@ -54,12 +55,10 @@ public class FoodRecetas extends AppCompatActivity {
     }
     public void getFoodFromList(){
         Bundle getFood = getIntent().getExtras();
-        foodFromMenu = getFood.getString("comida");
-        foodToShow = getFood.getString("comidaReceta");
+        foodToShow = getFood.getString("desayuno0");
     }
     public void appComponents(){
         txtReceta = findViewById(R.id.txtReceta);
-        txtFoodName = findViewById(R.id.txtFoodName);
         txtFoodTitle = findViewById(R.id.txtFoodTitle);
         imgFoodReceta = findViewById(R.id.imgFoodReceta);
         imgBack = findViewById(R.id.imgBack);
@@ -74,6 +73,8 @@ public class FoodRecetas extends AppCompatActivity {
     public void recetasDesayuno(){
         switch (foodToShow) {
             case "d0":
+                imgFoodReceta.setImageResource(R.drawable.d0);
+                txtReceta.setText(R.string.d0r);
                 break;
             case "d1":
                 break;

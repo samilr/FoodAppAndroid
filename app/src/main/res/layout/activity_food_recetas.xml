@@ -27,34 +27,22 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="25dp">
 
-        <FrameLayout
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="5dp">
 
-            <ImageView
-                android:id="@+id/imgFoodReceta"
-                android:layout_width="128dp"
-                android:layout_height="102dp"
-                android:layout_margin="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/imgFoodReceta"
+            android:layout_width="224dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/txtFoodName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="125dp"
-                android:text="NOMBRE DE LA COMIDA SELECCIONADA"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="10dp"/>
-        </FrameLayout>
+
 
         <TextView
             android:id="@+id/txtReceta"
             android:layout_width="match_parent"
             android:layout_height="359dp"
+            android:scrollbars="vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="175dp"
             android:layout_marginRight="10dp"

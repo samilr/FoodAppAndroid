@@ -9,24 +9,29 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FoodMenu extends AppCompatActivity {
-    String foodTypeFromList;
-    TextView txtFoodType;
+    String foodTypeFromList, foodReceta;
+    TextView txtFoodType, txtFood1, txtFood2, txtFood3, txtFood4;
     ImageView imgMenu, imgMenu2, imgMenu3, imgMenu4, imgBack, imgExit;
     FrameLayout fl1, fl2, fl3, fl4;
+    String desayuno[] = new String[]{"YOGUR DE AVELLANAS Y VAINILLA"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_menu);
-        appComponents();
         getFoodChoosenFromList();
-
+        appComponents();
+        showFoodListChoosen();
     }
     public void showFoodListChoosen() {
         switch (foodTypeFromList) {
             case "Desayuno":
-
+                getDesayuno();
                 break;
             case "almuerzo":
                 break;
@@ -57,6 +62,10 @@ public class FoodMenu extends AppCompatActivity {
         imgBack = findViewById(R.id.imgBack);
         imgExit = findViewById(R.id.imgExitApp);
         txtFoodType = findViewById(R.id.txtFoodType);
+        txtFood1 = findViewById(R.id.txtFood1);
+        txtFood2 = findViewById(R.id.txtFood2);
+        txtFood3 = findViewById(R.id.txtFood4);
+        txtFood4 = findViewById(R.id.txtFood4);
     }
 
     public void goBackToListFood(View view) {
@@ -64,9 +73,28 @@ public class FoodMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToActivityFoodRecetas(View view) {
+    public void goToActivityFoodRecetas1(View view) {
         Intent intent = new Intent(this, FoodRecetas.class);
+        foodReceta = txtFood1.getText().toString();
+
+        switch (foodReceta) {
+            case "YOGUR DE AVELLANAS Y VAINILLA":
+                intent.putExtra("desayuno0", "d0");
+                break;
+            case "almuerzo":
+                break;
+            case "merienda":
+                break;
+            case "cena":
+                break;
+            default:
+        }
         startActivity(intent);
+    }
+
+    public void getDesayuno(){
+        txtFood1.setText(desayuno[0]);
+        imgMenu.setImageResource(R.drawable.d0);
     }
 
 }

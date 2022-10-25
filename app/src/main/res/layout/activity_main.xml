@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@color/red">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="113dp"
+            android:text="¡BIENVENIDO!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50dp">
+        </TextView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="140dp"
+        android:layout_height="470dp"
+        android:background="@color/red">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Creamos esta aplicacion para que puedas aprender como preparar tus platos favoritos. \n\n Obtendras una frase o reflexion basada en tu genero. \n\n ¡Esperamos que sea de gran ayuda!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28dp"></TextView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="660dp"
+        android:background="@color/red">
+
+        <ImageView
+            android:id="@+id/imgContinue"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="305dp"
+            android:layout_weight="1"
+            android:onClick="goToActivityListFood"
+            app:srcCompat="@drawable/right" />
+
+
+        <ImageView
+            android:id="@+id/imgExitApp"
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="152dp"
+            android:layout_weight="1"
+            android:onClick="exitApp"
+            app:srcCompat="@drawable/x" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="384dp"
+        android:layout_height="113dp"
+        android:background="@color/red">
+
+        <TextView
+            android:id="@+id/txtFoodType"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginTop="10dp"
+            android:text="MENU DE COMIDAS PARA DESAYUNOS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"></TextView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="528dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="25dp">
+
+        <FrameLayout
+            android:id="@+id/fl1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:layout_width="128dp"
+                android:layout_height="102dp"
+                android:layout_margin="10dp"
+                tools:srcCompat="@tools:sample/avatars" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/imgMenu2"
+                android:layout_width="128dp"
+                android:layout_height="102dp"
+                android:layout_margin="10dp"
+                tools:srcCompat="@tools:sample/avatars" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="300dp">
+
+            <ImageView
+                android:id="@+id/imgMenu3"
+                android:layout_width="128dp"
+                android:layout_height="102dp"
+                android:layout_margin="10dp"
+                tools:srcCompat="@tools:sample/avatars" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="300dp">
+
+            <ImageView
+                android:id="@+id/imgMenu4"
+                android:layout_width="128dp"
+                android:layout_height="102dp"
+                android:layout_margin="10dp"
+                tools:srcCompat="@tools:sample/avatars" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="660dp"
+        android:background="@color/red">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goBackToListFood"
+            app:srcCompat="@drawable/left" />
+
+        <ImageView
+            android:id="@+id/imgExitApp"
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="152dp"
+            android:layout_weight="1"
+            android:onClick="ExitAppFromUserInfo"
+            app:srcCompat="@drawable/x" />
+
+    </FrameLayout>
+
+
+</FrameLayout>

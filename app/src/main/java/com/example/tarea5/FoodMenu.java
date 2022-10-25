@@ -17,7 +17,7 @@ public class FoodMenu extends AppCompatActivity {
     TextView txtFoodType, txtFood1, txtFood2, txtFood3, txtFood4;
     ImageView imgMenu, imgMenu2, imgMenu3, imgMenu4, imgBack, imgExit;
     FrameLayout fl1, fl2, fl3, fl4;
-    String desayuno[] = new String[]{"YOGUR DE AVELLANAS Y VAINILLA"};
+    String desayuno[] = new String[]{"YOGUR DE AVELLANAS Y VAINILLA", "TORTITAS DE AVENA CON PLÁTANO"};
 
 
     @Override
@@ -79,9 +79,10 @@ public class FoodMenu extends AppCompatActivity {
 
         switch (foodReceta) {
             case "YOGUR DE AVELLANAS Y VAINILLA":
-                intent.putExtra("desayuno0", "d0");
+                intent.putExtra("desayuno", "d0");
                 break;
-            case "almuerzo":
+            case "TORTITAS DE AVENA CON PLÁTANO":
+                intent.putExtra("desayuno", "d1");
                 break;
             case "merienda":
                 break;
@@ -89,12 +90,33 @@ public class FoodMenu extends AppCompatActivity {
                 break;
             default:
         }
+        intent.putExtra("tipo", foodTypeFromList);
+        startActivity(intent);
+    }
+    public void goToActivityFoodRecetas2(View view) {
+        Intent intent = new Intent(this, FoodRecetas.class);
+        foodReceta = txtFood2.getText().toString();
+
+        switch (foodReceta) {
+            case "TORTITAS DE AVENA CON PLÁTANO":
+                intent.putExtra("desayuno", "d1");
+                break;
+            case "merienda":
+                break;
+            case "cena":
+                break;
+            default:
+        }
+        intent.putExtra("tipo", foodTypeFromList);
         startActivity(intent);
     }
 
     public void getDesayuno(){
         txtFood1.setText(desayuno[0]);
         imgMenu.setImageResource(R.drawable.d0);
+
+        txtFood2.setText(desayuno[1]);
+        imgMenu2.setImageResource(R.drawable.d1);
     }
 
 }

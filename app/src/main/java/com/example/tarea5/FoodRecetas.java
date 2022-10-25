@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FoodRecetas extends AppCompatActivity {
-    String foodFromMenu, foodToShow;
+    String foodTypeFromMenu, foodToShow;
     TextView txtReceta, txtFoodTitle;
     ImageView imgFoodReceta;
     ImageView imgBack, imgExit;
@@ -33,13 +33,13 @@ public class FoodRecetas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_recetas);
         getFoodFromList();
-        getFoodFromList();
         appComponents();
-        recetasDesayuno();
+        showFoodListChoosen();
     }
     public void showFoodListChoosen() {
-        switch (foodFromMenu) {
+        switch (foodTypeFromMenu) {
             case "Desayuno":
+                recetasDesayuno();
                 break;
             case "Almuerzo":
                 break;
@@ -55,7 +55,8 @@ public class FoodRecetas extends AppCompatActivity {
     }
     public void getFoodFromList(){
         Bundle getFood = getIntent().getExtras();
-        foodToShow = getFood.getString("desayuno0");
+        foodToShow = getFood.getString("desayuno");
+        foodTypeFromMenu = getFood.getString("tipo");
     }
     public void appComponents(){
         txtReceta = findViewById(R.id.txtReceta);
@@ -77,6 +78,8 @@ public class FoodRecetas extends AppCompatActivity {
                 txtReceta.setText(R.string.d0r);
                 break;
             case "d1":
+                imgFoodReceta.setImageResource(R.drawable.d1);
+                txtReceta.setText(R.string.d1r);
                 break;
             case "d2":
                 break;

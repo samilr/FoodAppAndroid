@@ -58,7 +58,8 @@
             android:layout_width="150dp"
             android:layout_height="175dp"
             android:layout_marginLeft="200dp"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="50dp"
+            android:onClick="goToActivityFoodRecetas2">
 
             <ImageView
                 android:id="@+id/imgMenu2"

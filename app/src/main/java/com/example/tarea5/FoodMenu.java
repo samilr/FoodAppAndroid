@@ -27,7 +27,6 @@ public class FoodMenu extends AppCompatActivity {
         appComponents();
         getFoodChoosenFromList();
         showFoodListChoosen();
-
         txtFoodType.setText("MENU DE "+foodTypeFromList.toUpperCase());
     }
 
@@ -161,5 +160,4 @@ public class FoodMenu extends AppCompatActivity {
         chatarraImagenes = new int[]{R.drawable.ch0, R.drawable.ch1, R.drawable.ch2, R.drawable.ch3};
         chatarraSubtitulo  = new int[]{R.string.ch0s, R.string.ch1s, R.string.ch2s, R.string.ch3s};
     }
-
 }

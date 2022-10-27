@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:layout_marginTop="20dp"
-            android:text="¡Queremos conocerte!"
+            android:text="Selector de comidas"
             android:textColor="@color/white"
             android:textSize="35dp"></TextView>
     </FrameLayout>
@@ -27,39 +27,23 @@
         android:layout_marginRight="25dp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¿Cual es tu nombre?"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30dp" />
-
-        <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="30dp"
             android:text="¿Que tipo de comida deseas?"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
-        <EditText
-            android:id="@+id/txtName"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="50dp"
-            android:textAlignment="center" />
-
         <Spinner
             android:id="@+id/spFood"
-            android:layout_marginTop="215dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#D62B2B" />
 
 
     </FrameLayout>

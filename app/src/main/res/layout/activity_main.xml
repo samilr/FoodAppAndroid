@@ -25,17 +25,17 @@
 
     <FrameLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="190dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="140dp"
-        android:layout_height="470dp"
         android:background="@color/red">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Creamos esta aplicacion para que puedas aprender como preparar tus platos favoritos. \n\n Obtendras una frase o reflexion basada en tu genero. \n\n ¡Esperamos que sea de gran ayuda!"
+            android:text="¡HOLA! \n\nCreamos esta aplicacion para que puedas aprender como preparar tus platos favoritos. \n\n ¡Esperamos que sea de gran ayuda!"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="28dp"></TextView>

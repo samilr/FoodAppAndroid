@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.GestureDetector;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -13,9 +12,9 @@ import android.widget.Spinner;
 import java.util.Arrays;
 import java.util.List;
 
-public class ListFood extends AppCompatActivity{
+public class ListFood extends AppCompatActivity {
     Spinner spFood;
-    List<String> list = Arrays.asList("Desayuno", "Almuerzo", "Merienda", "Cena", "Frutas");
+    List<String> list = Arrays.asList("Desayuno", "Almuerzo", "Merienda", "Cena", "Chatarra");
     String foodChoosen;
     ImageView imgContinue, imgBack, imgExit;
 
@@ -23,14 +22,7 @@ public class ListFood extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_food);
-        spFood = findViewById(R.id.spFood);
-        imgContinue = findViewById(R.id.imgContinue);
-        imgBack = findViewById(R.id.imgBack);
-        imgExit = findViewById(R.id.imgExitApp);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, list);
-        spFood.setAdapter(adapter);
-
+        appComponents();
     }
     public void goToActivityFoodInfo(View view) {
         foodChoosen = spFood.getSelectedItem().toString();
@@ -38,4 +30,22 @@ public class ListFood extends AppCompatActivity{
         intent.putExtra("comida", foodChoosen);
         startActivity(intent);
     }
+
+    public void goToMain(View view) {
+        foodChoosen = spFood.getSelectedItem().toString();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void appComponents(){
+        spFood = findViewById(R.id.spFood);
+        imgContinue = findViewById(R.id.imgContinue);
+        imgBack = findViewById(R.id.imgBack);
+        imgExit = findViewById(R.id.imgExitApp);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String> (this ,
+                android.R. layout. simple_spinner_dropdown_item, list);
+        spFood.setAdapter(adapter);
+    }
+
 }

@@ -222,7 +222,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="152dp"
             android:layout_weight="1"
-            android:onClick="ExitAppFromUserInfo"
+            android:onClick="ExitFoodMenu"
             app:srcCompat="@drawable/x" />
 
     </FrameLayout>

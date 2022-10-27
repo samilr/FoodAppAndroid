@@ -1,7 +1,9 @@
 package com.example.tarea5;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +48,22 @@ public class ListFood extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String> (this ,
                 android.R. layout. simple_spinner_dropdown_item, list);
         spFood.setAdapter(adapter);
+    }
+
+    public void ExitListFood(View view) {
+        final  AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Estas seguro que quieres salir?")
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finishAffinity();
+                    }
+                }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        builder.create();
+        builder.show();
     }
 
 }

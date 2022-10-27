@@ -223,4 +223,19 @@ public class FoodRecetas extends AppCompatActivity {
         Intent intent = new Intent(this, FoodMenu.class);
         startActivity(intent);
     }
+    public void ExitRecetas(View view) {
+        final  AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Estas seguro que quieres salir?")
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finishAffinity();
+                    }
+                }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        builder.create();
+        builder.show();
+    }
 }

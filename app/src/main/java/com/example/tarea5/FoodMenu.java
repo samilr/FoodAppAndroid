@@ -1,7 +1,9 @@
 package com.example.tarea5;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -159,5 +161,20 @@ public class FoodMenu extends AppCompatActivity {
         chatarraTitulo = new int[]{R.string.ch0t, R.string.ch1t, R.string.ch2t, R.string.ch3t};
         chatarraImagenes = new int[]{R.drawable.ch0, R.drawable.ch1, R.drawable.ch2, R.drawable.ch3};
         chatarraSubtitulo  = new int[]{R.string.ch0s, R.string.ch1s, R.string.ch2s, R.string.ch3s};
+    }
+    public void ExitFoodMenu(View view) {
+        final  AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Estas seguro que quieres salir?")
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finishAffinity();
+                    }
+                }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        builder.create();
+        builder.show();
     }
 }

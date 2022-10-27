@@ -96,24 +96,40 @@ public class FoodRecetas extends AppCompatActivity {
     public void recetasDesayuno(){
         switch (foodToReceta) {
             case "YOGUR DE AVELLANAS Y VAINILLA":
+                /*
                 txtFoodTitle.setText(getResources().getString(desayunosTitulo[0]));
                 txtReceta.setText(getResources().getString(desayunosRecetas[0]));
                 imgFoodReceta.setImageResource(desayunosImagenes[0]);
+                 */
+
+                setRecetaInfo(desayunosTitulo[0], desayunosRecetas[0], desayunosImagenes[0]);
                 break;
             case "TORTITAS DE AVENA CON PLÁTANO":
+                /*
                 txtFoodTitle.setText(getResources().getString(desayunosTitulo[1]));
                 txtReceta.setText(getResources().getString(desayunosRecetas[1]));
                 imgFoodReceta.setImageResource(desayunosImagenes[1]);
+                 */
+
+                setRecetaInfo(desayunosTitulo[1], desayunosRecetas[1], desayunosImagenes[1]);
                 break;
             case "PUDIN DE SEMILLAS DE CHÍA":
+                /*
                 txtFoodTitle.setText(getResources().getString(desayunosTitulo[2]));
                 txtReceta.setText(getResources().getString(desayunosRecetas[2]));
                 imgFoodReceta.setImageResource(desayunosImagenes[2]);
+                 */
+
+                setRecetaInfo(desayunosTitulo[2], desayunosRecetas[2], desayunosImagenes[2]);
                 break;
             case "SÁNDWICH PORTOBELLO":
+                /*
                 txtFoodTitle.setText(getResources().getString(desayunosTitulo[3]));
                 txtReceta.setText(getResources().getString(desayunosRecetas[3]));
                 imgFoodReceta.setImageResource(desayunosImagenes[3]);
+                 */
+
+                setRecetaInfo(desayunosTitulo[3], desayunosRecetas[3], desayunosImagenes[3]);
                 break;
             default:
         }
@@ -121,49 +137,81 @@ public class FoodRecetas extends AppCompatActivity {
     public void recetasAlmuerzo(){
         switch (foodToReceta) {
             case "QUESADILLAS VEGETARIANAS":
+                /*
                 txtFoodTitle.setText(getResources().getString(almuerzoTitulo[0]));
                 txtReceta.setText(getResources().getString(almuerzoRecetas[0]));
                 imgFoodReceta.setImageResource(almuerzoImagenes[0]);
+                 */
+
+                setRecetaInfo(almuerzoTitulo[0], almuerzoRecetas[0], almuerzoImagenes[0]);
                 break;
             case "MEJILLONES EN ESCABECHE":
-                txtFoodTitle.setText(getResources().getString(desayunosTitulo[1]));
-                txtReceta.setText(getResources().getString(desayunosRecetas[1]));
-                imgFoodReceta.setImageResource(desayunosImagenes[1]);
+                /*
+                txtFoodTitle.setText(getResources().getString(almuerzoTitulo[1]));
+                txtReceta.setText(getResources().getString(almuerzoRecetas[1]));
+                imgFoodReceta.setImageResource(almuerzoImagenes[1]);
+                 */
+
+                setRecetaInfo(almuerzoTitulo[1], almuerzoRecetas[1], almuerzoImagenes[1]);
                 break;
             case "ROLLITOS DE QUESO Y JAMÓN YORK":
-                txtFoodTitle.setText(getResources().getString(desayunosTitulo[2]));
-                txtReceta.setText(getResources().getString(desayunosRecetas[2]));
-                imgFoodReceta.setImageResource(desayunosImagenes[2]);
+                /*
+                txtFoodTitle.setText(getResources().getString(almuerzoTitulo[2]));
+                txtReceta.setText(getResources().getString(almuerzoRecetas[2]));
+                imgFoodReceta.setImageResource(almuerzoImagenes[2]);
+                 */
+
+                setRecetaInfo(almuerzoTitulo[2], almuerzoRecetas[2], almuerzoImagenes[2]);
                 break;
             case "TORTILLA DE ESPINACAS":
-                txtFoodTitle.setText(getResources().getString(desayunosTitulo[3]));
-                txtReceta.setText(getResources().getString(desayunosRecetas[3]));
-                imgFoodReceta.setImageResource(desayunosImagenes[3]);
+                /*
+                txtFoodTitle.setText(getResources().getString(almuerzoTitulo[3]));
+                txtReceta.setText(getResources().getString(almuerzoRecetas[3]));
+                imgFoodReceta.setImageResource(almuerzoImagenes[3]);
+                 */
+
+                setRecetaInfo(almuerzoTitulo[3], almuerzoRecetas[3], almuerzoImagenes[3]);
                 break;
             default:
         }
     }
     public void recetasMerienda(){
         switch (foodToReceta) {
+
             case "FLAN DE GELATINA DE FRUTAS":
+                /*
                 txtFoodTitle.setText(getResources().getString(meriendaTitulo[0]));
                 txtReceta.setText(getResources().getString(meriendaRecetas[0]));
                 imgFoodReceta.setImageResource(meriendaImagenes[0]);
+             */
+
+                setRecetaInfo(meriendaTitulo[0], meriendaRecetas[0], meriendaImagenes[0]);
                 break;
             case "HUEVOS DUROS RELLENOS":
+                /*
                 txtFoodTitle.setText(getResources().getString(meriendaTitulo[1]));
                 txtReceta.setText(getResources().getString(meriendaRecetas[1]));
                 imgFoodReceta.setImageResource(meriendaImagenes[1]);
+                 */
+
+                setRecetaInfo(meriendaTitulo[1], meriendaRecetas[1], meriendaImagenes[1]);
                 break;
             case "BROCHETAS DE FRUTAS":
+                /*
                 txtFoodTitle.setText(getResources().getString(meriendaTitulo[2]));
                 txtReceta.setText(getResources().getString(meriendaRecetas[2]));
                 imgFoodReceta.setImageResource(meriendaImagenes[2]);
+                 */
+                setRecetaInfo(meriendaTitulo[2], meriendaRecetas[2], meriendaImagenes[2]);
                 break;
             case "SMOOTHIE DE MANGO":
+                /*
                 txtFoodTitle.setText(getResources().getString(meriendaTitulo[3]));
                 txtReceta.setText(getResources().getString(meriendaRecetas[3]));
                 imgFoodReceta.setImageResource(meriendaImagenes[3]);
+                 */
+
+                setRecetaInfo(meriendaTitulo[3], meriendaRecetas[3], meriendaImagenes[3]);
                 break;
             default:
         }
@@ -171,24 +219,40 @@ public class FoodRecetas extends AppCompatActivity {
     public void recetasCena(){
         switch (foodToReceta) {
             case "PIZZA EXPRÉS DE PAN DE MOLDE":
+                /*
                 txtFoodTitle.setText(getResources().getString(cenaTitulo[0]));
                 txtReceta.setText(getResources().getString(cenaRecetas[0]));
                 imgFoodReceta.setImageResource(cenaImagenes[0]);
+                 */
+
+                setRecetaInfo(cenaTitulo[0], cenaRecetas[0], cenaImagenes[0]);
                 break;
             case "QUICHÉ DE VERDURITAS Y QUESO DE BURGOS":
+                /*
                 txtFoodTitle.setText(getResources().getString(cenaTitulo[1]));
                 txtReceta.setText(getResources().getString(cenaRecetas[1]));
                 imgFoodReceta.setImageResource(cenaImagenes[1]);
+                 */
+
+                setRecetaInfo(cenaTitulo[1], cenaRecetas[1], cenaImagenes[1]);
                 break;
             case "POKE HAWAIANO":
+                /*
                 txtFoodTitle.setText(getResources().getString(cenaTitulo[2]));
                 txtReceta.setText(getResources().getString(cenaRecetas[2]));
                 imgFoodReceta.setImageResource(cenaImagenes[2]);
+                 */
+
+                setRecetaInfo(cenaTitulo[2], cenaRecetas[2], cenaImagenes[2]);
                 break;
             case "CROQUETAS DE BERENJENA Y BRIE":
+                /*
                 txtFoodTitle.setText(getResources().getString(cenaTitulo[3]));
                 txtReceta.setText(getResources().getString(cenaRecetas[3]));
                 imgFoodReceta.setImageResource(cenaImagenes[3]);
+                 */
+
+                setRecetaInfo(cenaTitulo[3], cenaRecetas[3], cenaImagenes[3]);
                 break;
             default:
         }
@@ -196,34 +260,55 @@ public class FoodRecetas extends AppCompatActivity {
     public void recetasChatarra(){
         switch (foodToReceta) {
             case "PIZZA CASERA":
+                /*
                 txtFoodTitle.setText(getResources().getString(chatarraTitulo[0]));
                 txtReceta.setText(getResources().getString(chatarraRecetas[0]));
                 imgFoodReceta.setImageResource(chatarraImagenes[0]);
+                 */
+
+                setRecetaInfo(chatarraTitulo[0], chatarraRecetas[0], chatarraImagenes[0]);
                 break;
             case "FISH y CHIPS":
+                /*
                 txtFoodTitle.setText(getResources().getString(chatarraTitulo[1]));
                 txtReceta.setText(getResources().getString(chatarraRecetas[1]));
                 imgFoodReceta.setImageResource(chatarraImagenes[1]);
+                 */
+
+                setRecetaInfo(chatarraTitulo[1], chatarraRecetas[1], chatarraImagenes[1]);
                 break;
             case "NACHOS AUTENTICOS":
+                /*
                 txtFoodTitle.setText(getResources().getString(chatarraTitulo[2]));
                 txtReceta.setText(getResources().getString(chatarraRecetas[2]));
                 imgFoodReceta.setImageResource(chatarraImagenes[2]);
+                 */
+
+                setRecetaInfo(chatarraTitulo[2], chatarraRecetas[2], chatarraImagenes[2]);
                 break;
             case "TACOS DE ATUN":
+                /*
                 txtFoodTitle.setText(getResources().getString(chatarraTitulo[3]));
                 txtReceta.setText(getResources().getString(chatarraRecetas[3]));
                 imgFoodReceta.setImageResource(chatarraImagenes[3]);
+                 */
+
+                setRecetaInfo(chatarraTitulo[3], chatarraRecetas[3], chatarraImagenes[3]);
                 break;
             default:
         }
     }
 
+    public void setRecetaInfo(int titulo, int receta, int imagenReceta){
+        txtFoodTitle.setText(getResources().getString(titulo));
+        txtReceta.setText(getResources().getString(receta));
+        imgFoodReceta.setImageResource(imagenReceta);
+    }
     public void goBackToMenu(View view) {
         Intent intent = new Intent(this, FoodMenu.class);
         startActivity(intent);
     }
-    public void ExitRecetas(View view) {
+    public void exitRecetas(View view) {
         final  AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("¿Estas seguro que quieres salir?")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {

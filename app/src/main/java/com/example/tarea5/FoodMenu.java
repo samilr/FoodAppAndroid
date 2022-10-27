@@ -46,6 +46,7 @@ public class FoodMenu extends AppCompatActivity {
 
         txtFoodType.setText("MENU DE "+foodTypeFromList.toUpperCase());
     }
+
     public void appComponents(){
         imgMenu0 = findViewById(R.id.imgMenu0);
         imgMenu1 = findViewById(R.id.imgMenu1);
@@ -70,8 +71,6 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1 = findViewById(R.id.txtMenuSubtitulo1);
         txtMenuSubtitulo2 = findViewById(R.id.txtMenuSubtitulo2);
         txtMenuSubtitulo3 = findViewById(R.id.txtMenuSubtitulo3);
-
-
     }
 
     public void showFoodListChoosen() {
@@ -123,6 +122,7 @@ public class FoodMenu extends AppCompatActivity {
 
 
     public void showBreakFastInfo(){
+        /*
         imgMenu0.setImageResource(desayunosImagenes[0]);
         imgMenu1.setImageResource(desayunosImagenes[1]);
         imgMenu2.setImageResource(desayunosImagenes[2]);
@@ -137,8 +137,13 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1.setText(getResources().getString(desayunosSubtitulo[1]));
         txtMenuSubtitulo2.setText(getResources().getString(desayunosSubtitulo[2]));
         txtMenuSubtitulo3.setText(getResources().getString(desayunosSubtitulo[3]));
+         */
+
+        setInfoToComponent(desayunosImagenes[0], desayunosImagenes[1], desayunosImagenes[2], desayunosImagenes[3], desayunosTitulo[0], desayunosTitulo[1],
+                desayunosTitulo[2], desayunosTitulo[3], desayunosSubtitulo[0], desayunosSubtitulo[1], desayunosSubtitulo[2], desayunosSubtitulo[3]);
     }
     public void showAlmuerzoInfo(){
+        /*
         imgMenu0.setImageResource(almuerzoImagenes[0]);
         imgMenu1.setImageResource(almuerzoImagenes[1]);
         imgMenu2.setImageResource(almuerzoImagenes[2]);
@@ -153,8 +158,13 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1.setText(getResources().getString(almuerzoSubtitulo[1]));
         txtMenuSubtitulo2.setText(getResources().getString(almuerzoSubtitulo[2]));
         txtMenuSubtitulo3.setText(getResources().getString(almuerzoSubtitulo[3]));
+         */
+
+        setInfoToComponent(almuerzoImagenes[0],almuerzoImagenes[1], almuerzoImagenes[2], almuerzoImagenes[3], almuerzoTitulo[0], almuerzoTitulo[1],
+                almuerzoTitulo[2], almuerzoTitulo[3], almuerzoSubtitulo[0], almuerzoSubtitulo[1], almuerzoSubtitulo[2], almuerzoSubtitulo[3]);
     }
     public void showMeriendaInfo(){
+        /*
         imgMenu0.setImageResource(meriendaImagenes[0]);
         imgMenu1.setImageResource(meriendaImagenes[1]);
         imgMenu2.setImageResource(meriendaImagenes[2]);
@@ -169,8 +179,13 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1.setText(getResources().getString(meriendaSubtitulo[1]));
         txtMenuSubtitulo2.setText(getResources().getString(meriendaSubtitulo[2]));
         txtMenuSubtitulo3.setText(getResources().getString(meriendaSubtitulo[3]));
+         */
+
+        setInfoToComponent(meriendaImagenes[0],meriendaImagenes[1], meriendaImagenes[2], meriendaImagenes[3], meriendaTitulo[0], meriendaTitulo[1],
+                meriendaTitulo[2], meriendaTitulo[3], meriendaSubtitulo[0], meriendaSubtitulo[1], meriendaSubtitulo[2], meriendaSubtitulo[3]);
     }
     public void showCenaInfo(){
+        /*
         imgMenu0.setImageResource(cenaImagenes[0]);
         imgMenu1.setImageResource(cenaImagenes[1]);
         imgMenu2.setImageResource(cenaImagenes[2]);
@@ -185,8 +200,13 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1.setText(getResources().getString(cenaSubtitulo[1]));
         txtMenuSubtitulo2.setText(getResources().getString(cenaSubtitulo[2]));
         txtMenuSubtitulo3.setText(getResources().getString(cenaSubtitulo[3]));
+         */
+
+        setInfoToComponent(cenaImagenes[0],cenaImagenes[1], cenaImagenes[2], cenaImagenes[3], cenaTitulo[0], cenaTitulo[1],
+                cenaTitulo[2], cenaTitulo[3], cenaSubtitulo[0], cenaSubtitulo[1], cenaSubtitulo[2], cenaSubtitulo[3]);
     }
     public void showChatarraInfo(){
+        /*
         imgMenu0.setImageResource(chatarraImagenes[0]);
         imgMenu1.setImageResource(chatarraImagenes[1]);
         imgMenu2.setImageResource(chatarraImagenes[2]);
@@ -201,6 +221,10 @@ public class FoodMenu extends AppCompatActivity {
         txtMenuSubtitulo1.setText(getResources().getString(chatarraSubtitulo[1]));
         txtMenuSubtitulo2.setText(getResources().getString(chatarraSubtitulo[2]));
         txtMenuSubtitulo3.setText(getResources().getString(chatarraSubtitulo[3]));
+         */
+
+        setInfoToComponent(chatarraImagenes[0],chatarraImagenes[1], chatarraImagenes[2], chatarraImagenes[3], chatarraTitulo[0], chatarraTitulo[1],
+                chatarraTitulo[2], chatarraTitulo[3], chatarraSubtitulo[0], chatarraSubtitulo[1], chatarraSubtitulo[2], chatarraSubtitulo[3]);
     }
 
     public void sentFood(String foodToShow){
@@ -208,6 +232,24 @@ public class FoodMenu extends AppCompatActivity {
         intent.putExtra("comida", foodToShow);
         intent.putExtra("comidaTipo", foodTypeFromList);
         startActivity(intent);
+    }
+
+    public void setInfoToComponent(int img, int imgDos, int imgTres, int imgCuatro, int txt, int txtDos, int txtTres, int txtCuatro, int Sub, int subDos, int subTres, int subCuatro){
+        imgMenu0.setImageResource(img);
+        imgMenu1.setImageResource(imgDos);
+        imgMenu2.setImageResource(imgTres);
+        imgMenu3.setImageResource(imgCuatro);
+
+        txtMenuTitulo0.setText(getResources().getString(txt));
+        txtMenuTitulo1.setText(getResources().getString(txtDos));
+        txtMenuTitulo2.setText(getResources().getString(txtTres));
+        txtMenuTitulo3.setText(getResources().getString(txtCuatro));
+
+        txtMenuSubtitulo0.setText(getResources().getString(Sub));
+        txtMenuSubtitulo1.setText(getResources().getString(subDos));
+        txtMenuSubtitulo2.setText(getResources().getString(subTres));
+        txtMenuSubtitulo3.setText(getResources().getString(subCuatro));
+
     }
 
 }
